@@ -139,15 +139,15 @@
     <!-- Download Section -->
     <section id="introduction" class="content-section">
 
-      <div id="downloads" class="container">
+      <div id="downloads">
         <div class="row">
-          <div class="col-lg-10 mx-auto text-center">
+          <div class="col-lg-8 mx-auto text-center">
             <h2 style="border: 3px solid #42DCA3;border-radius:15px;">Liste des Diagrammes</h2><br><br>
           </div>
         </div>
 
         <div class="row">
-          <div id="tab_toggle" class="btn btn-outline-light col-lg-12 mx-auto" style="text-align:left;" data-toggle="collapse" data-target="#tab_dl"> <div id="tab_collapse_text" class="row" style="border-bottom:2px solid white;"><div class="col-lg-4">Téléchargement et consultation des XMind</div><div class="col-lg-1 offset-lg-7"><i class="fa fa-arrow-down"></i></div></div> </div>
+          <div id="tab_toggle" class="btn btn-outline-light col-lg-10 mx-auto" style="text-align:left;" data-toggle="collapse" data-target="#tab_dl"> <div id="tab_collapse_text" class="row" style="border-bottom:2px solid white;"><div class="col-lg-4">Téléchargement et consultation des XMind</div><div class="col-lg-1 offset-lg-7"><i id="tab_togg" class="fa fa-arrow-right"></i></div></div> </div>
         </div>
 
         <br><br>
@@ -163,7 +163,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                      <tr><td style="background-color:#444444;color:black;">Phénomènes</td></tr>
+                      <tr><td style="background-color:#3B3B3B;color:black;">Phénomènes</td></tr>
                       <tr>
                         <td>Régulation thermique</td>
                         <td style="text-align:center;"><?= round(filesize("xmind_dl/regulation_thermique.xmind")/1000) . " kB"?></td>
@@ -174,7 +174,7 @@
                         <td style="text-align:center;"><?= round(filesize("xmind_dl/regulation_thermique.xmind")/1000) . " kB"?></td>
                         <td style="text-align:center;"><a href="https://media.giphy.com/media/14uQ3cOFteDaU/giphy.gif" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/.png" target="_blank"><i class="fa fa-eye"></i></a></td>
                       </tr>
-                      <tr><td style="background-color:#444444;color:black;">Activités</td></tr>
+                      <tr><td style="background-color:#3B3B3B;color:black;">Activités</td></tr>
                       <tr>
                         <td>Préparer une sortie extra-véhiculaire</td>
                         <td style="text-align:center;"><?= round(filesize("xmind_dl/preparer_une_sortie_extra-vehiculaire.xmind")/1000) . " kB"?></td>
@@ -185,7 +185,7 @@
                         <td style="text-align:center;"><?= round(filesize("xmind_dl/regulation_thermique.xmind")/1000) . " kB"?></td>
                         <td style="text-align:center;"><a href="https://media.giphy.com/media/14uQ3cOFteDaU/giphy.gif" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/.png" target="_blank"><i class="fa fa-eye"></i></a></td>
                       </tr>
-                      <tr><td style="background-color:#444444;color:black;">Concepts</td></tr>
+                      <tr><td style="background-color:#3B3B3B;color:black;">Concepts</td></tr>
                       <tr>
                         <td>conceptjesaisquoi#1</td>
                         <td style="text-align:center;"><?= round(filesize("xmind_dl/regulation_thermique.xmind")/1000) . " kB"?></td>
@@ -197,7 +197,7 @@
                         <td style="text-align:center;"><a href="https://media.giphy.com/media/14uQ3cOFteDaU/giphy.gif" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/.png" target="_blank"><i class="fa fa-eye"></i></a></td>
                       </tr>
                       <!-- ###template###
-                      <tr><td style="background-color:#444444;color:black;">MASTERNAME</td></tr>
+                      <tr><td style="background-color:#3B3B3B;color:black;">MASTERNAME</td></tr>
                       <tr>
                         <td></td>
                         <td style="text-align:center;"><= round(filesize("xmind_dl/.xmind")/1000) . " kB"?></td>
@@ -214,20 +214,23 @@
             </div>
           </div>
         </div>
-
       </div>
-
-
       <br><br>
+
+
+      <div class="row">
+        <div id="prez_toggle" class="btn btn-outline-light col-lg-10 mx-auto" style="text-align:left;" data-toggle="collapse" data-target="#select_xminds" aria-expanded="true"> <div id="tab_collapse_text" class="row" style="border-bottom:2px solid white;"><div class="col-lg-4">Consultation expliquée des XMind</div><div class="col-lg-1 offset-lg-7"><i id="tab_togg_2" class="fa fa-arrow-down"></i></div></div> </div>
+      </div>
+      <br><br>
+      
       <!-- Affichage des Xminds par sélection -->
-      <div id="select_xminds" class="row">
+      <div id="select_xminds" class="row collapse show">
         <!-- on choisit le xmind à afficher (-->
 
-        <br><br>
 
-        <div class="col-lg-10 offset-lg-1 well text-center" style="background-color: rgb(24, 21, 43);border-radius:30px;"><br>
+        <div class="col-lg-10 offset-lg-1 well text-center" style="background-color: #2B2B2B;border-radius:30px;"><br>
 
-          <form class="form-group" action="diagrammes.php#select_xminds" method="POST" id="selected">
+          <form class="form-group" action="diagrammes.php#prez_toggle" method="POST" id="selected">
             <input type="hidden" id="img_number" value=<?php if(isset($_POST["selected_xmind"])) {echo $_POST["selected_xmind"];} else {echo 1;} ?>>
             <select id="select_xmind" name="selected_xmind" class="form-control col-lg-4 offset-lg-8" onchange="$('#selected').submit();">
               <option value="1">Régulation thermique</option>
@@ -267,14 +270,21 @@
       $('#select_xmind option[value="' + xmind_nb + '"]').prop('selected', true);
 
       /*Execute the magnify function:*/
-      magnify("current_xmind", 3);
       
       $("#tab_toggle").hover(function() {
         $("#tab_collapse_text").attr('style', 'border-bottom:0px solid black');
-      })
+      });
       $("#tab_toggle").mouseleave(function() {
         $("#tab_collapse_text").attr('style', 'border-bottom:2px solid white;');
-      })
+      });
+      $("#tab_toggle").click(function() {
+        $("#tab_togg").toggleClass('fa-rotate-90');
+      });
+      $("#prez_toggle").click(function() {
+        $("#tab_togg_2").toggleClass('fa-rotate-270');
+      });
+
+      magnify("current_xmind", 3);      
     </script> 
 
   </body>
