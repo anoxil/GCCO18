@@ -219,14 +219,13 @@
 
 
       <div class="row">
-        <div id="prez_toggle" class="btn btn-outline-light col-lg-10 mx-auto" style="text-align:left;" data-toggle="collapse" data-target="#select_xminds" aria-expanded="true"> <div id="tab_collapse_text" class="row" style="border-bottom:2px solid white;"><div class="col-lg-4">Consultation expliquée des XMind</div><div class="col-lg-1 offset-lg-7"><i id="tab_togg_2" class="fa fa-arrow-down"></i></div></div> </div>
+        <div id="prez_toggle" class="btn btn-outline-light col-lg-10 mx-auto" style="text-align:left;" data-toggle="collapse" data-target="#select_xminds" aria-expanded="true"> <div id="xmind_collapse_text" class="row" style="border-bottom:2px solid white;"><div class="col-lg-4">Consultation détaillée des XMind</div><div class="col-lg-1 offset-lg-7"><i id="tab_togg_2" class="fa fa-arrow-down"></i></div></div> </div>
       </div>
       <br><br>
       
       <!-- Affichage des Xminds par sélection -->
       <div id="select_xminds" class="row collapse show">
-        <!-- on choisit le xmind à afficher (-->
-
+        <!-- on choisit le xmind à afficher -->
 
         <div class="col-lg-10 offset-lg-1 well text-center" style="background-color: #2B2B2B;border-radius:30px;"><br>
 
@@ -268,14 +267,18 @@
     <script>
       let xmind_nb = $("#img_number").val();
       $('#select_xmind option[value="' + xmind_nb + '"]').prop('selected', true);
-
-      /*Execute the magnify function:*/
       
       $("#tab_toggle").hover(function() {
         $("#tab_collapse_text").attr('style', 'border-bottom:0px solid black');
       });
       $("#tab_toggle").mouseleave(function() {
         $("#tab_collapse_text").attr('style', 'border-bottom:2px solid white;');
+      });
+      $("#prez_toggle").hover(function() {
+        $("#xmind_collapse_text").attr('style', 'border-bottom:0px solid black');
+      });
+      $("#prez_toggle").mouseleave(function() {
+        $("#xmind_collapse_text").attr('style', 'border-bottom:2px solid white;');
       });
       $("#tab_toggle").click(function() {
         $("#tab_togg").toggleClass('fa-rotate-90');
@@ -284,6 +287,7 @@
         $("#tab_togg_2").toggleClass('fa-rotate-270');
       });
 
+      /*Execute the magnify function:*/
       magnify("current_xmind", 3);      
     </script> 
 
