@@ -163,39 +163,38 @@
                     </tr>
                   </thead>
                   <tbody>
-                      <tr><td style="background-color:#3B3B3B;color:black;">Phénomènes</td></tr>
+                      <!--tr><td style="background-color:#3B3B3B;color:black;">Phénomènes</td></tr-->
                       <tr>
-                        <td>Régulation thermique</td>
+                        <td>Phénomène - Régulation thermique</td>
                         <td style="text-align:center;"><?= round(filesize("xmind_dl/regulation_thermique.xmind")/1000) . " kB"?></td>
                         <td style="text-align:center;"><a href="xmind_dl/regulation_thermique.xmind" download><i class="fa fa-download"></i></a> | <a href="img/xminds/1.png" target="_blank"><i class="fa fa-eye"></i></a></td>
                       </tr>
                       <tr>
-                        <td>Régulation des gazs</td>
-                        <td style="text-align:center;"><?= round(filesize("xmind_dl/regulation_thermique.xmind")/1000) . " kB"?></td>
-                        <td style="text-align:center;"><a href="https://media.giphy.com/media/14uQ3cOFteDaU/giphy.gif" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/.png" target="_blank"><i class="fa fa-eye"></i></a></td>
-                      </tr>
-                      <tr><td style="background-color:#3B3B3B;color:black;">Activités</td></tr>
-                      <tr>
-                        <td>Préparer une sortie extra-véhiculaire</td>
-                        <td style="text-align:center;"><?= round(filesize("xmind_dl/preparer_une_sortie_extra-vehiculaire.xmind")/1000) . " kB"?></td>
-                        <td style="text-align:center;"><a href="xmind_dl/preparer_une_sortie_extra-vehiculaire.xmind" download><i class="fa fa-download"></i></a> | <a href="img/xminds/2.png" target="_blank"><i class="fa fa-eye"></i></a></td>
+                        <td>Phénomène - Respiration (classique et d'urgence)</td>
+                        <td style="text-align:center;"><?= round(filesize("xmind_dl/respiration.xmind")/1000) . " kB"?></td>
+                        <td style="text-align:center;"><a href="xmind_dl/respiration.xmind" download><i class="fa fa-download"></i></a> | <a href="img/xminds/2.png" target="_blank"><i class="fa fa-eye"></i></a></td>
                       </tr>
                       <tr>
-                        <td>TAKE YOUR SPACE SUIT JOHN AND FLY AWAY <i class="fa fa-space-shuttle"></i> <i class="fa fa-space-shuttle"></i> <i class="fa fa-space-shuttle"></i></td>
-                        <td style="text-align:center;"><?= round(filesize("xmind_dl/regulation_thermique.xmind")/1000) . " kB"?></td>
-                        <td style="text-align:center;"><a href="https://media.giphy.com/media/14uQ3cOFteDaU/giphy.gif" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/.png" target="_blank"><i class="fa fa-eye"></i></a></td>
-                      </tr>
-                      <tr><td style="background-color:#3B3B3B;color:black;">Concepts</td></tr>
-                      <tr>
-                        <td>conceptjesaisquoi#1</td>
-                        <td style="text-align:center;"><?= round(filesize("xmind_dl/regulation_thermique.xmind")/1000) . " kB"?></td>
-                        <td style="text-align:center;"><a href="https://media.giphy.com/media/14uQ3cOFteDaU/giphy.gif" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/.png" target="_blank"><i class="fa fa-eye"></i></a></td>
+                        <td>OIDC</td>
+                        <td style="text-align:center;"><?= round(filesize("xmind_dl/oidc.xmind")/1000) . " kB"?></td>
+                        <td style="text-align:center;"><a href="xmind_dl/oidc.xmind" download><i class="fa fa-download"></i></a> | <a href="img/xminds/3.png" target="_blank"><i class="fa fa-eye"></i></a></td>
                       </tr>
                       <tr>
-                        <td>conceptjesaisquoi#2</td>
-                        <td style="text-align:center;"><?= round(filesize("xmind_dl/regulation_thermique.xmind")/1000) . " kB"?></td>
-                        <td style="text-align:center;"><a href="https://media.giphy.com/media/14uQ3cOFteDaU/giphy.gif" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/.png" target="_blank"><i class="fa fa-eye"></i></a></td>
+                        <td>Activité</td>
+                        <td style="text-align:center;"><?= round(filesize("xmind_dl/activite.xmind")/1000) . " kB"?></td>
+                        <td style="text-align:center;"><a href="xmind_dl/activite.xmind" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/4.png" target="_blank"><i class="fa fa-eye"></i></a></td>
                       </tr>
+                      <tr>
+                        <td>Tâche</td>
+                        <td style="text-align:center;"><?= round(filesize("xmind_dl/tache.xmind")/1000) . " kB"?></td>
+                        <td style="text-align:center;"><a href="xmind_dl/tache.xmind" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/5.png" target="_blank"><i class="fa fa-eye"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td>Concept</td>
+                        <td style="text-align:center;"><?= round(filesize("xmind_dl/concept.xmind")/1000) . " kB"?></td>
+                        <td style="text-align:center;"><a href="xmind_dl/concept.xmind" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/6.png" target="_blank"><i class="fa fa-eye"></i></a></td>
+                      </tr>
+
                       <!-- ###template###
                       <tr><td style="background-color:#3B3B3B;color:black;">MASTERNAME</td></tr>
                       <tr>
@@ -222,11 +221,11 @@
         <div id="prez_toggle" class="btn btn-outline-light col-lg-10 mx-auto" style="text-align:left;" data-toggle="collapse" data-target="#select_xminds" aria-expanded="true"> <div id="xmind_collapse_text" class="row" style="border-bottom:2px solid white;"><div class="col-lg-4">Consultation détaillée des XMind</div><div class="col-lg-1 offset-lg-7"><i id="tab_togg_2" class="fa fa-arrow-down"></i></div></div> </div>
       </div>
       <br><br>
-      
+
       <!-- Affichage des Xminds par sélection -->
       <div id="select_xminds" class="row collapse show">
+        
         <!-- on choisit le xmind à afficher -->
-
         <div class="col-lg-10 offset-lg-1 well text-center" style="background-color: #2B2B2B;border-radius:30px;"><br>
 
           <form class="form-group" action="diagrammes.php#prez_toggle" method="POST" id="selected">
@@ -234,8 +233,13 @@
             <select id="select_xmind" name="selected_xmind" class="form-control col-lg-4 offset-lg-8" onchange="$('#selected').submit();">
               <option value="1">Régulation thermique</option>
               <option value="2">Vous n'êtes pas du tout semblable à ma rose</option>
+              <option value="3">Vous n'êtes pas du tout semblable à ma rose</option>
+              <option value="4">Vous n'êtes pas du tout semblable à ma rose</option>
+              <option value="5">Vous n'êtes pas du tout semblable à ma rose</option>
             </select>
           </form>
+        <div class="col-lg-4" style="color:#F58E9D; font-size:14px">La loupe ne fonctionne pas ? Appuyez sur F5 !</div>
+          
 
           <div class="img-magnifier-container">
             <img id="current_xmind" src="img/xminds/<?php if(isset($_POST["selected_xmind"])) {echo $_POST["selected_xmind"];} else {echo 1;}?>.png" style="border-radius:10px;border:4px solid black" width="100%" height="100%">
