@@ -167,32 +167,32 @@
                       <tr>
                         <td>Phénomène - Régulation thermique</td>
                         <td style="text-align:center;"><?= round(filesize("xmind_dl/regulation_thermique.xmind")/1000) . " kB"?></td>
-                        <td style="text-align:center;"><a href="xmind_dl/regulation_thermique.xmind" download><i class="fa fa-download"></i></a> | <a href="img/xminds/1.png" target="_blank"><i class="fa fa-eye"></i></a></td>
+                        <td style="text-align:center;"><a href="xmind_dl/regulation_thermique.xmind" download><i class="fa fa-download"></i></a> | <a href="img/xminds/regulation_thermique.png" target="_blank"><i class="fa fa-eye"></i></a></td>
                       </tr>
                       <tr>
                         <td>Phénomène - Respiration (classique et d'urgence)</td>
                         <td style="text-align:center;"><?= round(filesize("xmind_dl/respiration.xmind")/1000) . " kB"?></td>
-                        <td style="text-align:center;"><a href="xmind_dl/respiration.xmind" download><i class="fa fa-download"></i></a> | <a href="img/xminds/2.png" target="_blank"><i class="fa fa-eye"></i></a></td>
+                        <td style="text-align:center;"><a href="xmind_dl/respiration.xmind" download><i class="fa fa-download"></i></a> | <a href="img/xminds/respiration.png" target="_blank"><i class="fa fa-eye"></i></a></td>
                       </tr>
                       <tr>
                         <td>OIDC</td>
                         <td style="text-align:center;"><?= round(filesize("xmind_dl/oidc.xmind")/1000) . " kB"?></td>
-                        <td style="text-align:center;"><a href="xmind_dl/oidc.xmind" download><i class="fa fa-download"></i></a> | <a href="img/xminds/3.png" target="_blank"><i class="fa fa-eye"></i></a></td>
+                        <td style="text-align:center;"><a href="xmind_dl/oidc.xmind" download><i class="fa fa-download"></i></a> | <a href="img/xminds/oidc.png" target="_blank"><i class="fa fa-eye"></i></a></td>
                       </tr>
                       <tr>
                         <td>Activité</td>
                         <td style="text-align:center;"><?= round(filesize("xmind_dl/activite.xmind")/1000) . " kB"?></td>
-                        <td style="text-align:center;"><a href="xmind_dl/activite.xmind" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/4.png" target="_blank"><i class="fa fa-eye"></i></a></td>
+                        <td style="text-align:center;"><a href="xmind_dl/activite.xmind" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/activite.png" target="_blank"><i class="fa fa-eye"></i></a></td>
                       </tr>
                       <tr>
                         <td>Tâche</td>
                         <td style="text-align:center;"><?= round(filesize("xmind_dl/tache.xmind")/1000) . " kB"?></td>
-                        <td style="text-align:center;"><a href="xmind_dl/tache.xmind" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/5.png" target="_blank"><i class="fa fa-eye"></i></a></td>
+                        <td style="text-align:center;"><a href="xmind_dl/tache.xmind" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/tache.png" target="_blank"><i class="fa fa-eye"></i></a></td>
                       </tr>
                       <tr>
                         <td>Concept</td>
                         <td style="text-align:center;"><?= round(filesize("xmind_dl/concept.xmind")/1000) . " kB"?></td>
-                        <td style="text-align:center;"><a href="xmind_dl/concept.xmind" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/6.png" target="_blank"><i class="fa fa-eye"></i></a></td>
+                        <td style="text-align:center;"><a href="xmind_dl/concept.xmind" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/concept.png" target="_blank"><i class="fa fa-eye"></i></a></td>
                       </tr>
 
                       <!-- ###template###
@@ -229,20 +229,21 @@
         <div class="col-lg-10 offset-lg-1 well text-center" style="background-color: #2B2B2B;border-radius:30px;"><br>
 
           <form class="form-group" action="diagrammes.php#prez_toggle" method="POST" id="selected">
-            <input type="hidden" id="img_number" value=<?php if(isset($_POST["selected_xmind"])) {echo $_POST["selected_xmind"];} else {echo 1;} ?>>
+            <input type="hidden" id="img_number" value=<?php if(isset($_POST["selected_xmind"])) {echo $_POST["selected_xmind"];} else {echo "regulation_thermique";} ?>>
             <select id="select_xmind" name="selected_xmind" class="form-control col-lg-4 offset-lg-8" onchange="$('#selected').submit();">
-              <option value="1">Régulation thermique</option>
-              <option value="2">Vous n'êtes pas du tout semblable à ma rose</option>
-              <option value="3">Vous n'êtes pas du tout semblable à ma rose</option>
-              <option value="4">Vous n'êtes pas du tout semblable à ma rose</option>
-              <option value="5">Vous n'êtes pas du tout semblable à ma rose</option>
+              <option value="regulation_thermique">Régulation thermique</option>
+              <option value="respiration">Respiration (classique et d'urgence)</option>
+              <option value="oidc">OIDC</option>
+              <option value="activite">Activité</option>
+              <option value="tache">Tâche</option>
+              <option value="concept">Concept</option>
             </select>
           </form>
         <div class="col-lg-4" style="color:#F58E9D; font-size:14px">La loupe ne fonctionne pas ? Appuyez sur F5 !</div>
           
 
           <div class="img-magnifier-container">
-            <img id="current_xmind" src="img/xminds/<?php if(isset($_POST["selected_xmind"])) {echo $_POST["selected_xmind"];} else {echo 1;}?>.png" style="border-radius:10px;border:4px solid black" width="100%" height="100%">
+            <img id="current_xmind" src="img/xminds/<?php if(isset($_POST["selected_xmind"])) {echo $_POST["selected_xmind"];} else {echo "regulation_thermique";}?>.png" style="border-radius:10px;border:4px solid black" width="100%" height="100%">
           </div>
           <br><br><br>
         </div>
