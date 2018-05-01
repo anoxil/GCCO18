@@ -165,9 +165,14 @@
                   <tbody>
                       <!--tr><td style="background-color:#3B3B3B;color:black;">Phénomènes</td></tr-->
                       <tr>
-                        <td>Phénomène - Régulation thermique</td>
-                        <td style="text-align:center;"><?= round(filesize("xmind_dl/regulation_thermique.xmind")/1000) . " kB"?></td>
-                        <td style="text-align:center;"><a href="xmind_dl/regulation_thermique.xmind" download><i class="fa fa-download"></i></a> | <a href="img/xminds/regulation_thermique.png" target="_blank"><i class="fa fa-eye"></i></a></td>
+                        <td>Phénomène - Régulation thermique refroidir</td>
+                        <td style="text-align:center;"><?= round(filesize("xmind_dl/regulation_thermique_refroidir.xmind")/1000) . " kB"?></td>
+                        <td style="text-align:center;"><a href="xmind_dl/regulation_thermique_refroidir.xmind" download><i class="fa fa-download"></i></a> | <a href="img/xminds/regulation_thermique_refroidir.png" target="_blank"><i class="fa fa-eye"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td>Phénomène - Régulation thermique réchauffer</td>
+                        <td style="text-align:center;"><?= round(filesize("xmind_dl/regulation_thermique_rechauffer.xmind")/1000) . " kB"?></td>
+                        <td style="text-align:center;"><a href="xmind_dl/regulation_thermique_rechauffer.xmind" download><i class="fa fa-download"></i></a> | <a href="img/xminds/regulation_thermique_rechauffer.png" target="_blank"><i class="fa fa-eye"></i></a></td>
                       </tr>
                       <tr>
                         <td>Phénomène - Respiration (classique et d'urgence)</td>
@@ -229,9 +234,10 @@
         <div class="col-lg-10 offset-lg-1 well text-center" style="background-color: #2B2B2B;border-radius:30px;"><br>
 
           <form class="form-group" action="diagrammes.php#prez_toggle" method="POST" id="selected">
-            <input type="hidden" id="img_number" value=<?php if(isset($_POST["selected_xmind"])) {echo $_POST["selected_xmind"];} else {echo "regulation_thermique";} ?>>
+            <input type="hidden" id="img_number" value=<?php if(isset($_POST["selected_xmind"])) {echo $_POST["selected_xmind"];} else {echo "regulation_thermique_refroidir";} ?>>
             <select id="select_xmind" name="selected_xmind" class="form-control col-lg-4 offset-lg-8" onchange="$('#selected').submit();">
-              <option value="regulation_thermique">Régulation thermique</option>
+              <option value="regulation_thermique_refroidir">Régulation thermique refroidir</option>
+              <option value="regulation_thermique_rechauffer">Régulation thermique réchauffer</option>
               <option value="respiration">Respiration (classique et d'urgence)</option>
               <option value="oidc">OIDC</option>
               <option value="activite">Activité</option>
@@ -243,7 +249,7 @@
           
 
           <div class="img-magnifier-container">
-            <img id="current_xmind" src="img/xminds/<?php if(isset($_POST["selected_xmind"])) {echo $_POST["selected_xmind"];} else {echo "regulation_thermique";}?>.png" style="border-radius:10px;border:4px solid black" width="100%" height="100%">
+            <img id="current_xmind" src="img/xminds/<?php if(isset($_POST["selected_xmind"])) {echo $_POST["selected_xmind"];} else {echo "regulation_thermique_refroidir";}?>.png" style="border-radius:10px;border:4px solid black" width="100%" height="100%">
           </div>
           <br><br><br>
         </div>
