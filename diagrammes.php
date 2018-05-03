@@ -125,7 +125,7 @@
             </li>
             <li class="nav-item">
               <div style="border-right: 2px solid #ffffff;">
-                <a class="nav-link" href="sigles.html">Sigles</a>
+                <a class="nav-link" href="sigles.html">Dictionnaire</a>
               </div>
             </li>
             <li class="nav-item">
