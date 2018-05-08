@@ -129,7 +129,11 @@
               </div>
             </li>
             <li class="nav-item">
+                <div style="border-right: 2px solid #ffffff;">              
                 <a class="nav-link" href="#page-top">Diagrammes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="conclusion.html">Conclusion</a>
             </li>
           </ul>
         </div>
@@ -199,20 +203,6 @@
                         <td style="text-align:center;"><?= round(filesize("xmind_dl/concept.xmind")/1000) . " kB"?></td>
                         <td style="text-align:center;"><a href="xmind_dl/concept.xmind" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/concept.png" target="_blank"><i class="fa fa-eye"></i></a></td>
                       </tr>
-
-                      <!-- ###template###
-                      <tr><td style="background-color:#3B3B3B;color:black;">MASTERNAME</td></tr>
-                      <tr>
-                        <td></td>
-                        <td style="text-align:center;"><= round(filesize("xmind_dl/.xmind")/1000) . " kB"?></td>
-                        <td style="text-align:center;"><a href="" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/.png" target="_blank"><i class="fa fa-eye"></i></a></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td style="text-align:center;"></td>
-                        <td style="text-align:center;"><a href="" target="_blank" download><i class="fa fa-download"></i></a> | <a href="img/xminds/.png" target="_blank"><i class="fa fa-eye"></i></a></td>
-                      </tr>
-                      -->
                   </tbody>
               </table>
             </div>
